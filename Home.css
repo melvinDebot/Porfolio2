@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+}
+.Section-1{
+    height:100vh;
+    width:100%;
+    padding-top:20%
+  }
+  svg {
+      display: block;
+      font: 100px 'Lobster';
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+  }
+  .Peugeot{
+      width: 95px;
+      height: 95px;
+  }
+  .img_Setting{
+        position:absolute;
+        height:200px;
+        left:-100px;
+        animation: spinning 30s infinite alternate;
+  }
+  .img_Setting2{
+    position:absolute;
+    height:200px;
+    right:-100px;
+    top:400px;
+    animation: spinning 30s infinite alternate;
+  }
+  @keyframes spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .text {
+      fill: none;
+      stroke: white;
+      stroke-dasharray: 6% 29%;
+      stroke-width: 5px;
+      stroke-dashoffset: 0%;
+      animation: stroke-offset 5.5s infinite linear;
+  }
+  
+  .text:nth-child(1){
+      stroke: #679EBF;
+      animation-delay: -10;
+  }
+  
+  .text:nth-child(2){
+      stroke: #8AD2FF;
+      animation-delay: -20s;
+  }
+  
+  .text:nth-child(3){
+      stroke: #45697F;
+      animation-delay: -30s;
+  }
+  
+  .text:nth-child(4){
+      stroke: #223540;
+      animation-delay: -40s;
+  }
+  
+  .text:nth-child(5){
+      stroke: #7CBDE5;
+      animation-delay: -15s;
+  }
+  
+  @keyframes stroke-offset{
+      100% {stroke-dashoffset: -35%;}
+  }
+  .Section-2{
+      height: 100vh;
+      width: 100%;
+  }
+  .Titre{
+    text-align:center;
+    width:100%;
+    height:10%;
+  }
+  .link {
+      outline: none;
+      text-decoration: none;
+      font-size: 60px;
+      line-height: 1;
+      color: red;
+  }
+  .link--kukuri {
+      text-transform: uppercase;
+      font-weight: 900;
+      overflow: hidden;
+      line-height: 0.75;
+      color: #b2b0a9;
+  }
+  
+  .link--kukuri:hover {
+      color: #b2b0a9;
+  }
+  
+  
+  
+  .link--kukuri:hover::after {
+      transform: translate3d(100%,0,0);
+  }
+  
+  .link--kukuri::before {
+      content: attr(data-letters);
+      position: absolute;
+      z-index: 2;
+      overflow: hidden;
+      color: #424242;
+      white-space: nowrap;
+      width: 0%;
+      transition: width 0.4s 0.3s;
+  }
+  
+  .link--kukuri:hover::before {
+      width: 100%;
+  }
+  .Project{
+      text-align: center;
+      background-image: url(BackgroundWaves.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .box {
+	width: 300px;
+	height: 460px;
+	background: rgba(255,255,255,1);
+	display: inline-block;
+	margin: 0 10px;
+	cursor: pointer;
+	color: #2c3e50;
+	box-shadow: inset 0 0 0 3px #2c3e50;
+	-webkit-transition: background 0.4s 0.5s;
+	transition: background 0.4s 0.5s;
+}
+.box:nth-child(4){
+    margin-top: 20px;
+}
+
+.box:hover {
+	background: rgba(255,255,255,0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.box h3 {
+	font-family: "Ruthie", cursive;
+	font-size: 180px;
+	line-height: 370px;
+	margin: 0;
+	font-weight: 400;
+	width: 100%;
+  text-align:center;
+}
+
+.box span {
+	display: block;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.box h3,
+.box span {
+	-webkit-transition: color 0.4s 0.5s;
+	transition: color 0.4s 0.5s;
+}
+
+.box:hover h3,
+.box:hover span {
+	color: #fff;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.box svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.box svg line {
+	stroke-width: 3;
+	stroke: #ecf0f1;
+	fill: none;
+	-webkit-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+.box:hover svg line {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+.box svg line.top,
+.box svg line.bottom {
+	stroke-dasharray: 330 240; 
+}
+
+.box svg line.left,
+.box svg line.right {
+	stroke-dasharray: 490 400;
+}
+.box:hover svg line.top {
+	-webkit-transform: translateX(-600px);
+	transform: translateX(-600px);
+}
+
+.box:hover svg line.bottom {
+	-webkit-transform: translateX(600px);
+	transform: translateX(600px);
+}
+
+.box:hover svg line.left {
+	-webkit-transform: translateY(920px);
+	transform: translateY(920px);
+}
+
+.box:hover svg line.right {
+	-webkit-transform: translateY(-920px);
+	transform: translateY(-920px);
+}
+footer{
+    border: solid 3px red;
+    display: flex;
+}
+.Footer_span-2{
+    float: right;
+}
